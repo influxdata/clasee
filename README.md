@@ -10,7 +10,7 @@ CLASEE_SECRET="$(cat secrets.json | base64)"
 clasee <spreadsheet-id> <spreadsheet-range>
 ```
 
-Demonstration Workflow:
+Demonstration of a github workflow yaml:
 
 ```yaml
 on:
