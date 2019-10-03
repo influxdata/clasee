@@ -1,4 +1,6 @@
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened]
 
 jobs:
   test_action:
@@ -9,6 +11,7 @@ jobs:
       - name: "Test Action"
         uses: influxdata/clasee@v1
         with:
-          spreadsheet: "1Pnv4Xv7n08tD8frCKhqprj5QxEszy4MtNJInIMS9jgs"
+          spreadsheet: "1jnRZYSw83oa6hcEBb1lxK6nNvXrWnOzPT8Bz9iR4Q8s"
+          range: "Form Responses!E:E"
         env:
           CLASEE_SECRET: ${{ secrets.CLASEE_SECRET }}
