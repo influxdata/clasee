@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"strings"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2/google"
@@ -23,7 +24,7 @@ func main() {
 		panic("usage: clasee <sheet to check> <range to check>")
 	}
 
-	author := os.Getenv("GITHUB_ACTOR")
+	author := strings.ToLower(os.Getenv("GITHUB_ACTOR"))
 	if author == "" {
 		failOnError(errors.New("no PR author provided"))
 	}
@@ -53,7 +54,7 @@ func main() {
 	failOnError(err)
 
 	for _, row := range resp.Values {
-		if len(row) > 0 && row[0] == author {
+		if len(row) > 0 && strings.ToLower(row[0].(string)) == author {
 			os.Exit(0)
 		}
 	}
