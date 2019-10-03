@@ -1,0 +1,18 @@
+# action.yml
+name: 'CLAsee Bot'
+description: 'Check if the PR author has signed the InfluxData CLA'
+branding:
+  icon: search
+inputs:
+  spreadsheet:  # id of input
+    description: 'The spreadsheet to search'
+    required: true
+  range: # range to search
+    description: 'The spreadsheet range to search'
+    default: "Sheet1!E:E"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.spreadsheet }}
+    - ${{ inputs.range }}
