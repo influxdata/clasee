@@ -1,0 +1,11 @@
+on: [pull_request]
+
+jobs:
+  test_action:
+    name: "Test Action Job"
+    steps:
+      - uses: actions/checkout@v1
+      - name: "Test Action"
+        uses: actions/clasee@v1
+        with:
+          spreadsheet: "1Pnv4Xv7n08tD8frCKhqprj5QxEszy4MtNJInIMS9jgs"
