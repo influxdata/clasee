@@ -11,4 +11,4 @@ jobs:
         with:
           spreadsheet: "1Pnv4Xv7n08tD8frCKhqprj5QxEszy4MtNJInIMS9jgs"
         env:
-          clasee_secret: ${{ secrets.CLASEE_SECRET }}
+          CLASEE_SECRET: ${{ secrets.CLASEE_SECRET }}
