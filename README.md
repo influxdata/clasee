@@ -1,3 +1,10 @@
+# THIS REPO IS ARCHIVED
+
+See https://github.com/influxdata/k8s-idpe/issues/17843#issuecomment-1633120657
+for details
+
+
+
 CLAsee - InfluxData CLA Checker
 -------------------------------
 
